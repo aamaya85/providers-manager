@@ -5,14 +5,5 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     plugins: [react()],
-    // server: {
-    //   proxy: {
-    //     "/api/v1/*": {
-    //       target: env.VITE_API_URL,
-    //       changeOrigin: true,
-    //       rewrite: (path) => path.replace(/^\/api/, ""),
-    //     },
-    //   },
-    // },
   };
 });
