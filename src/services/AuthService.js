@@ -11,7 +11,7 @@ export const AuthService = {
             const response = await axios.post('/login', {
                 "username": data.username,
                 "password": data.password
-            }, { baseURL: API_URL, credentials: "include" });
+            }, { baseURL: API_URL });
             return {
                 success: true,
                 data: response.data
