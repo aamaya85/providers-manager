@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = "/api";
+const API_URL = import.meta.env.VITE_API_URL
+
 axios.defaults.withCredentials = true;
 
 export const AuthService = {
@@ -11,7 +12,6 @@ export const AuthService = {
                 "username": data.username,
                 "password": data.password
             }, { baseURL: API_URL, credentials: "include" });
-            console.log(response)
             return {
                 success: true,
                 data: response.data
