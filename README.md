@@ -1,2 +1,2 @@
-# providers-manager
+# Providers-manager
 Providers management application (ReactJS) - Frontend
