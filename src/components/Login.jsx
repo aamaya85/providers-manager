@@ -26,7 +26,7 @@ const Login = () => {
                         console.log(response)
                         sessionStorageUtil.saveSessionData("userID", response.data.user_id);
                         sessionStorageUtil.saveSessionData("userRole", response.data.user_role);
-                        //window.location.href = "/providers"
+                        window.location.href = "/providers"
                     } else {
                         showError(response.message)
                     }
