@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import sessionStorageUtil from '../utils/sessionStorageUtil'
-
 import { AuthService } from '../services/AuthService';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
@@ -27,7 +26,7 @@ const Login = () => {
                         console.log(response)
                         sessionStorageUtil.saveSessionData("userID", response.data.user_id);
                         sessionStorageUtil.saveSessionData("userRole", response.data.user_role);
-                        window.location.href = "/"
+                        //window.location.href = "/providers"
                     } else {
                         showError(response.message)
                     }
